@@ -1,0 +1,11 @@
+name: doodoo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  my-job:
+    runs-on: windows-2022
+    steps:
+      - name: doodoo-step
+        run: echo "${{ secrets.GITHUB_TOKEN }}"
