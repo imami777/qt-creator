@@ -43,7 +43,7 @@ jobs:
       id: git
       shell: cmake -P {0}
       run: |
-        echo "THIS IS THE FUCKING ONE ${{ github.repository }}
+        message("THIS IS THE FUCKING ONE ${{ github.repository }}")
         execute_process(COMMAND git submodule set-url -- perfparser https://code.qt.io/qt-creator/perfparser.git)
         execute_process(COMMAND git submodule update --init --recursive)
         file(MAKE_DIRECTORY release)
